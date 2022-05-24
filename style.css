@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --ri-bght-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+  --light-cyan: #4abebd;
+  --white: #fff;
+  --f-family: "Karla", sans-serif;
+  --f-size: 16px;
+}
+
+/* Global Section */
+
+body {
+  background-color: var(--light-gray);
+  font-family: var(--f-family);
+  font-size: var(--f-size);
+}
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 30px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 100%;
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0px 0px 14px 1px #00000024;
+  overflow: hidden;
+}
+
+/* Top Container */
+
+.top-container {
+  padding: 30px;
+  background-color: var(--white);
+}
+.heading {
+  color: var(--cyan);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.trial {
+  color: var(--ri-bght-yellow);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.description {
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Sub Section */
+
+.sub {
+  padding: 30px;
+  background-color: var(--cyan);
+}
+.title {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.price {
+  color: var(--light-gray);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.price span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.access {
+  color: var(--light-gray);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 10px;
+}
+.btn {
+  padding: 15px;
+  background-color: var(--ri-bght-yellow);
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 30px;
+  box-shadow: 0px 4px 10px 1px #00000033;
+  border-radius: 8px;
+}
+
+/* Why Section */
+
+.why {
+  padding: 30px;
+  background-color: var(--light-cyan);
+}
+.title-2 {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.lists {
+  list-style: none;
+  color: var(--light-gray);
+  line-height: 1.5rem;
+}
+
+/* Footer Section */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+
+@media (min-width: 760px) {
+  .wrapper {
+    grid-template-columns: 50% 50%;
+  }
+  .top-container {
+    grid-area: 1/1/2/3;
+  }
+  .sub,
+  .why {
+    grid-row: 2;
+  }
+}
